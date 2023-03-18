@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { User, Blog, Comment } = require('../models')
 const withAuth = require('../utils/auth')
 
-// localhost:3001/home
+// localhost:3001/
 
 // Render blogs on the homepage
 router.get('/', async (req, res) => {
