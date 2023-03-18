@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { Comment } = require('../../models')
 const withAuth = require('../../utils/auth')
 
-// /api/comment
+// localhost:3001/api/comment
 
 // Comment post
 router.post('/', withAuth, async (req, res) =>{
