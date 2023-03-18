@@ -9,7 +9,18 @@
     <div class="card-body">
       <h5 class="card-title fw-bold">{{blog.title}}</h5>
       <p class="card-text">{{blog.contents}}</p>
-      <a href="#" class="btn btn-primary">Add Comment</a>
     </div>
   </div>
+
+  {{#if logged_in}}
+  <div class="card mt-4">
+    <div class="card-body">
+      <h5 class="card-title">Leave a comment</h5>
+      <div class="mb-3">
+        <textarea class="form-control" id="comment-form" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Post</button>
+    </div>
+  </div>
+  {{/if}}
 </section>
