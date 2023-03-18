@@ -1,0 +1,10 @@
+<section class="container-fluid row">
+{{#each blogs as |blog|}}
+<div class="card m-2 mt-4" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{blog.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Created on: {{format_date blog.date_created}}</h6>
+  </div>
+</div>
+{{/each}}
+</section>
