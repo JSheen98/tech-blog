@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { Blog } = require('../../models')
 const withAuth = require('../../utils/auth')
 
-// /api/blog
+// localhost:3001/api/blog
 
 // Blog post
 router.post('/', withAuth, async (req, res) => {
