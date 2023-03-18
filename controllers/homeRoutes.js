@@ -17,6 +17,26 @@ router.get('/', async (req, res) => {
     }
 })
 
+// Render login screen
+router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/')
+        return
+    }
+
+    res.render('login')
+})
+
+// Render sign up screen
+router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/')
+        return
+    }
+    
+    res.render('signup')
+})
+
 // Should render one blog, by id
 router.get('/:id', async (req, res) => {
     try{
@@ -37,24 +57,6 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-// Render login screen
-router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/')
-        return
-    }
 
-    res.render('login')
-})
-
-// Render sign up screen
-router.get('/signup', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/')
-        return
-    }
-    
-    res.render('signup')
-})
 
 module.exports = router

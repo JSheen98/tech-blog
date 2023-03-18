@@ -1,20 +1,23 @@
-<div class="card mt-4">
-  <div class="card-header">
-    Sign Up
+<section class="container-fluid">
+  <div class="card mt-4">
+    <div class="card-header">
+      Sign Up
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="signup-username" class="form-label">Username</label>
+          <input type="email" class="form-control" id="signup-username" />
+        </div>
+        <div class="mb-3">
+          <label for="signup-password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="signup-password" />
+        </div>
+        <a href="/login">Already have an account? Log in here</a>
+        <br /><br />
+        <button type="submit" class="btn btn-primary signup-submit-btn">Create
+          Account</button>
+      </form>
+    </div>
   </div>
-  <div class="card-body">
-    <form>
-      <div class="mb-3">
-        <label for="signup-username" class="form-label">Username</label>
-        <input type="email" class="form-control" id="signup-username" />
-      </div>
-      <div class="mb-3">
-        <label for="signup-password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="signup-password" />
-      </div>
-      <a href="/login">Already have an account? Log in here</a>
-      <br /><br />
-      <button type="submit" class="btn btn-primary">Create Account</button>
-    </form>
-  </div>
-</div>
+</section>
