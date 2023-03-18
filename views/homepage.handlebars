@@ -2,7 +2,9 @@
   <section class="container-fluid">
     <div class="card mt-4" style="width: 100%;">
       <div class="card-body">
-        <h5 class="card-title fw-bold">{{blog.title}}</h5>
+        <h5 class="card-title fw-bold">
+          <a href="/{{blog.id}}">{{blog.title}}</a>
+          </h5>
         <h6 class="card-subtitle mb-2 text-muted fw-semibold">Created on:
           <span class="fw-bold">{{format_date blog.date_created}}</span></h6>
         <p class="card-text">{{blog.contents}}</p>

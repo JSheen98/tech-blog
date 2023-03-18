@@ -1,0 +1,15 @@
+<section class="container-fluid">
+  <div class="card mt-4">
+    <div class="card-header">
+      Created by
+      <span class="fw-bold">{{blog.user.username}}</span>
+      on
+      {{format_date blog.date_created}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title fw-bold">{{blog.title}}</h5>
+      <p class="card-text">{{blog.contents}}</p>
+      <a href="#" class="btn btn-primary">Add Comment</a>
+    </div>
+  </div>
+</section>
