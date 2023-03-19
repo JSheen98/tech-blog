@@ -4,7 +4,7 @@
 <div class="card m-2 mt-4" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">
-      <a href="/{{blog.id}}/edit">{{blog.title}}</a></h5>
+      <a href="/dashboard/{{blog.id}}/edit">{{blog.title}}</a></h5>
     <h6 class="card-subtitle mb-2 text-muted">Created on: {{format_date blog.date_created}}</h6>
   </div>
 </div>
@@ -12,5 +12,5 @@
 </section>
 
 <section>
-  <a type="button" class="btn btn-primary btn-lg fixed-bottom mb-4 m-4 fs-3" href="/dashboard/create" style="width: 15rem;">+ Create Post</a>
+  <a type="button" class="btn btn-primary btn-lg fixed-bottom mb-4 m-4 fs-3 fw-semibold bg-success" href="/dashboard/create" style="width: 15rem; color: black; border: 0;">+ Create Post</a>
 </section>
