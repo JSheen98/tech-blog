@@ -87,4 +87,6 @@ The following images represent the website's appearance:
 ![Blog Post Edit](./public/images/blog-edit.png)
 
 
-## 🌐 Deployed Application: 
+## 🌐 Deployed Application:
+
+https://safe-ridge-72471.herokuapp.com/
