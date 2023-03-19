@@ -9,7 +9,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
         const newBlog = await Blog.create({
             ...req.body,
-            user_id: req.session.user_id // what is the point of this?
+            user_id: req.session.user_id
         })
         res.status(200).json(newBlog)
     } catch (err) {
@@ -23,7 +23,7 @@ router.put('/:id', withAuth, async(req, res) => {
         const blogData = await Blog.update(
             {
                 ...req.body,
-                user_id: req.session.user_id, // Should this be here, in the 'where' or in both
+                user_id: req.session.user_id,
             },
             {
                 where: {
