@@ -1,7 +1,8 @@
 <section class="container-fluid">
   <div class="card mt-4">
     <div class="card-body">
-      <h5 class="card-title">Create a new post</h5>
+      <h5 class="card-title">Update a post</h5>
+      <form class="edit-post-form">
       <div class="mb-3">
         <textarea
           class="form-control"
@@ -19,7 +20,10 @@
         >{{blog.contents}}</textarea>
       </div>
       <button type="submit" id="edit-post-button" class="btn btn-primary bg-success fw-semibold" style="color: black; border: 0;">Update Post</button>
-      <button type="submit" id="delete-post-button" class="btn btn-primary bg-danger fw-semibold" style="color: black; border: 0;">Delete Post</button>
+      <button type="button" id="delete-post-button" class="btn btn-primary bg-danger fw-semibold" style="color: black; border: 0;">Delete Post</button>
+    </form>
     </div>
   </div>
 </section>
+
+<script src="/js/edit-blog.js"></script>

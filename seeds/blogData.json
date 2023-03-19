@@ -5,10 +5,30 @@
     },
     {
         "title": "Avatar",
-        "contents": "The last airbender, not the blue people"
+        "contents": "The last airbender"
     },
     {
         "title": "Lord of the Rings",
         "contents": "The whole trilogy"
+    },
+    {
+        "title": "Iron Man",
+        "contents": "No one can replace Robert Downey Jr."
+    },
+    {
+        "title": "Spiderman",
+        "contents": "Which Peter Parker is the best?"
+    },
+    {
+        "title": "Dummy Title",
+        "contents": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+        "title": "James and the Giant Peach",
+        "contents": "Does it hold up? Or is it actually kinda creepy?"
+    },
+    {
+        "title": "King Kong",
+        "contents": "My second favorite fictional monkey"
     }
 ]
