@@ -15,7 +15,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../../public/css/style.css" />
+    {{!-- <link rel="stylesheet" href="../../public/css/style.css" /> --}}
   </head>
 
   <body>
@@ -37,7 +37,7 @@
                         </li>
                         {{!-- {{#if logged_in}} --}}
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" id="logout" href="/logout">Logout</a>
+                            <a class="nav-link fw-semibold" style="cursor: pointer;" id="logout">Logout</a>
                         </li>
                         {{!-- {{else}} --}}
                         <li class="nav-item">
@@ -55,6 +55,6 @@
     <main>
         {{{ body }}}
     </main>
-    <script src="/js/logout.js"></script>
+    <script src="./js/logout.js"></script>
   </body>
 </html>
