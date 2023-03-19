@@ -1,0 +1,25 @@
+<section class="container-fluid">
+  <div class="card mt-4">
+    <div class="card-body">
+      <h5 class="card-title">Create a new post</h5>
+      <div class="mb-3">
+        <textarea
+          class="form-control"
+          id="new-post-title"
+          rows="1"
+          placeholder="Title"
+        >{{blog.title}}</textarea>
+      </div>
+      <div class="mb-3">
+        <textarea
+          class="form-control"
+          id="new-post-contents"
+          rows="3"
+          placeholder="Enter your post here!"
+        >{{blog.contents}}</textarea>
+      </div>
+      <button type="submit" id="edit-post-button" class="btn btn-primary bg-success fw-semibold" style="color: black; border: 0;">Update Post</button>
+      <button type="submit" id="delete-post-button" class="btn btn-primary bg-danger fw-semibold" style="color: black; border: 0;">Delete Post</button>
+    </div>
+  </div>
+</section>

@@ -51,7 +51,7 @@ router.get('/:id', async (req, res) => {
 
         const blog = blogData.get({ plain: true })
 
-        res.render('blog', {blog} )
+        res.render('blog', { blog })
     } catch (err) {
         res.status(500).json(err)
     }
