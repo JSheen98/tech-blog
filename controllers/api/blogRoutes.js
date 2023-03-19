@@ -23,7 +23,7 @@ router.put('/:id', withAuth, async(req, res) => {
         const blogData = await Blog.update(
             {
                 ...req.body,
-                // user_id: req.session.user_id, // Should this be here, in the 'where' or in both
+                user_id: req.session.user_id, // Should this be here, in the 'where' or in both
             },
             {
                 where: {

@@ -14,16 +14,10 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/')
         } else {
-            alert(response.statusText)
+            alert("Account could not be created")
         }
     }
 }
-
-// if (document.querySelector('.signup-form')) {
-//     document
-//     .querySelector('.signup-form')
-//     .addEventListener('submit', signupFormHandler)
-// }
 
 document
     .querySelector('.signup-form')

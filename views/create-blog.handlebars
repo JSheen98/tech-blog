@@ -2,23 +2,32 @@
   <div class="card mt-4">
     <div class="card-body">
       <h5 class="card-title">Create a new post</h5>
-      <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Title"
-        />
-      </div>
-      <div class="mb-3">
-        <textarea
-          class="form-control"
-          id="comment-form"
-          rows="3"
-          placeholder="Enter your post here!"
-        ></textarea>
-      </div>
-      <button type="submit" id="create-post-button" class="btn btn-primary bg-success fw-semibold" style="color: black; border: 0;">Post</button>
+      <form class="create-post-form">
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="create-post-title"
+            placeholder="Title"
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            id="create-post-contents"
+            rows="3"
+            placeholder="Enter your post here!"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          id="create-post-button"
+          class="btn btn-primary bg-success fw-semibold"
+          style="color: black; border: 0;"
+        >Post</button>
+      </form>
     </div>
   </div>
 </section>
+
+<script src="/js/create-blog.js"></script>

@@ -15,17 +15,12 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/')
         } else {
-            alert(response.statusText)
+            alert("Username or password is incorrect")
         }
     }
 }
 
-// if (document.querySelector('.login-form')) {
-//     document
-//     .querySelector('.login-form')
-//     .addEventListener('submit', loginFormHandler)
-// }
-
+// Finds login-form class in html, and adds event listener to submit button with the above function
 document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler)
