@@ -35,15 +35,15 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="/dashboard">Dashboard</a>
                         </li>
-                        {{#if logged_in}}
+                        {{!-- {{#if logged_in}} --}}
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="/logout">Logout</a>
+                            <a class="nav-link fw-semibold" id="logout" href="/logout">Logout</a>
                         </li>
-                        {{else}}
+                        {{!-- {{else}} --}}
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="/login">Login</a>
                         </li>
-                        {{/if}}
+                        {{!-- {{/if}} --}}
                     </ul>
                     <span class="navbar-text fw-bold">Techie 101
                     </span>
@@ -55,5 +55,6 @@
     <main>
         {{{ body }}}
     </main>
+    <script src="/js/logout.js"></script>
   </body>
 </html>
