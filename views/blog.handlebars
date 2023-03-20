@@ -12,7 +12,8 @@
     </div>
   </div>
 
-  {{#each comments as |comment|}}
+{{!-- For each blog, display the all associated comments --}}
+  {{#each blog.comments as |comment|}}
     <div class="card mt-4">
       <div class="card-body">
         {{comment.contents}}
@@ -23,7 +24,8 @@
     </div>
   {{/each}}
 
-  {{!-- {{#if logged_in}} --}}
+{{!-- If logged in, show the 'Leave a comment' form --}}
+  {{#if logged_in}}
   <div class="card mt-4">
     <div class="card-body">
       <h5 class="card-title">Leave a comment</h5>
@@ -35,7 +37,10 @@
       </form>
     </div>
   </div>
-  {{!-- {{/if}} --}}
+  {{/if}}
 </section>
 
+{{!-- If logged in, script functionality for comment form --}}
+{{#if logged_in}}
 <script src="/js/add-comment.js"></script>
+{{/if}}

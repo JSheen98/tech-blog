@@ -1,3 +1,4 @@
+// Frontend request function for sign up
 const signupFormHandler = async (event) => {
     event.preventDefault()
 
@@ -19,6 +20,7 @@ const signupFormHandler = async (event) => {
     }
 }
 
+// Event listener for form submit
 document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler)

@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 
         const blogs = blogData.map((blog) => blog.get({ plain: true }))
 
-        res.render('homepage', { blogs })
+        res.render('homepage', { blogs, logged_in: req.session.logged_in })
     } catch (err) {
         res.status(500).json(err)
     }
@@ -21,10 +21,11 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/')
+        
         return
     }
 
-    res.render('login')
+    res.render('login' )
 })
 
 // Render sign up screen
@@ -45,13 +46,23 @@ router.get('/:id', async (req, res) => {
                {
                 model: User,
                 attributes: ['username']
-               } 
+               }, 
+               {
+                model: Comment,
+                include: [
+                    {
+                        model: User
+                    }
+                ]
+               }
             ]
         })
 
         const blog = blogData.get({ plain: true })
 
-        res.render('blog', { blog })
+        console.log(blog)
+
+        res.render('blog', { blog,  logged_in: req.session.logged_in })
     } catch (err) {
         res.status(500).json(err)
     }

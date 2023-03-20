@@ -34,15 +34,16 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="/dashboard">My Dashboard</a>
                         </li>
-                        {{!-- {{#if logged_in}} --}}
+                        {{!-- If logged in, show the logout button, else, show login button --}}
+                        {{#if logged_in}}
                         <li class="nav-item">
                             <a class="nav-link fw-semibold" style="cursor: pointer;" id="logout">Logout</a>
                         </li>
-                        {{!-- {{else}} --}}
+                        {{else}}
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="/login">Login</a>
                         </li>
-                        {{!-- {{/if}} --}}
+                        {{/if}}
                     </ul>
                     <span class="navbar-text fw-bold">Techie 101
                     </span>
@@ -52,8 +53,12 @@
     </header>
 
     <main class="mb-4">
+        {{!-- display body: all the other .handlebars files --}}
         {{{ body }}}
     </main>
+    {{!-- If logged in, script will function --}}
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>

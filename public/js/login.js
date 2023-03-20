@@ -1,3 +1,4 @@
+// Frontend request to login
 const loginFormHandler = async (event) => {
     event.preventDefault()
 
