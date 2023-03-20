@@ -1,8 +1,28 @@
 const router = require('express').Router()
-const { Comment } = require('../../models')
+const { Comment, User } = require('../../models')
 const withAuth = require('../../utils/auth')
 
 // localhost:3001/api/comment
+
+// Render comments
+router.get('/', async (req, res) => {
+    try {
+        const commentData = await Comment.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            ]
+        })
+
+        const comments = commentData.map((comment) => comment.get({ plain: true }))
+
+        res.render('blog', {comments})
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 // Comment post
 router.post('/', withAuth, async (req, res) =>{

@@ -12,15 +12,30 @@
     </div>
   </div>
 
-  {{#if logged_in}}
+  {{#each comments as |comment|}}
+    <div class="card mt-4">
+      <div class="card-body">
+        {{comment.contents}}
+        <span class="fw-bold">-{{comment.user.username}}</span>
+        on
+        {{format_date comment.date_created}}
+      </div>
+    </div>
+  {{/each}}
+
+  {{!-- {{#if logged_in}} --}}
   <div class="card mt-4">
     <div class="card-body">
       <h5 class="card-title">Leave a comment</h5>
-      <div class="mb-3">
-        <textarea class="form-control" id="comment-form" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Post</button>
+      <form class="create-comment-form">
+        <div class="mb-3">
+          <textarea class="form-control" id="comment-form" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+      </form>
     </div>
   </div>
-  {{/if}}
+  {{!-- {{/if}} --}}
 </section>
+
+<script src="/js/add-comment.js"></script>

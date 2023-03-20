@@ -1,6 +1,3 @@
-const blogTitle = document.querySelector('#edit-post-title').value
-const blogContents = document.querySelector('#edit-post-contents').value
-
 const url = window.location.pathname
 const filterNumber = url.match(/(\d+)/)
 const id = filterNumber[1]
