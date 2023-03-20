@@ -1,3 +1,4 @@
+// Frontend request to logout
 const logout = async () => {
     const response = await fetch('/api/user/logout', {
         method: 'POST',
@@ -11,4 +12,5 @@ const logout = async () => {
     }
 }
 
+// Event listener for form submit
 document.querySelector('#logout').addEventListener('click', logout)

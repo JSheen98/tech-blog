@@ -1,9 +1,9 @@
+// These variables go through and grab the id by taking the url and using a regex to grab only the number (id), then putting that in a variable
 const url = window.location.pathname
 const filterNumber = url.match(/(\d+)/)
 const id = filterNumber[1]
 
-console.log(id)
-
+// Frontend request to create a comment
 const createCommentHandler = async (event) => {
     event.preventDefault()
 
@@ -12,7 +12,7 @@ const createCommentHandler = async (event) => {
     if (commentContents) {
         const response = await fetch(`/api/comment`, {
             method: 'POST', 
-            body: JSON.stringify({ blog_id: id, content: commentContents }),
+            body: JSON.stringify({ blog_id: id, contents: commentContents }),
             headers: { 'Content-type': 'application/json' }
         })
 
@@ -24,6 +24,7 @@ const createCommentHandler = async (event) => {
     }
 }
 
+// Event listener for form submit
 document
     .querySelector('.create-comment-form')
     .addEventListener('submit', createCommentHandler)

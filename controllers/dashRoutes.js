@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth')
 
 // localhost:3001/dashboard
 
-// Gets all post created by the logged in user
+// Gets all posts created by the logged in user
 router.get('/', withAuth, async (req, res) => {
     try {
         const userBlogs = await Blog.findAll({
@@ -22,14 +22,14 @@ router.get('/', withAuth, async (req, res) => {
 
         const blogs = userBlogs.map((blog) => blog.get({ plain: true }))
 
-        res.render('dashboard', { blogs })
+        res.render('dashboard', { blogs, logged_in: req.session.logged_in })
     } catch (err) {
         res.status(500).json(err)
     }
 })
 
 // Get route to render 'create-blog' handlebars
-router.get('/create', withAuth, async (req, res) => { res.render('create-blog') })
+router.get('/create', withAuth, async (req, res) => { res.render('create-blog', { logged_in: req.session.logged_in } ) })
 
 // Get route to render 'edit-blog' handlebars
 router.get('/:id/edit', withAuth, async (req, res) => {
@@ -38,7 +38,7 @@ router.get('/:id/edit', withAuth, async (req, res) => {
 
         const blog = blogData.get({ plain: true })
 
-        res.render('edit-blog', { blog })
+        res.render('edit-blog', { blog, logged_in: req.session.logged_in })
 
     } catch (err) {
         res.status(500).json(err)

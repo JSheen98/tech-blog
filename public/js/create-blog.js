@@ -1,3 +1,4 @@
+// Frontend request to create a new blog post
 const newBlogHandler = async (event) => {
     event.preventDefault()
 
@@ -19,6 +20,7 @@ const newBlogHandler = async (event) => {
     }
 }
 
+// Event listener for form submit
 document
     .querySelector('.create-post-form')
     .addEventListener('submit', newBlogHandler)
