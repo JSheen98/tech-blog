@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const { User, Blog, Comment } = require('../models')
-const withAuth = require('../utils/auth')
 
 // localhost:3001/
 
@@ -67,7 +66,5 @@ router.get('/:id', async (req, res) => {
         res.status(500).json(err)
     }
 })
-
-
 
 module.exports = router

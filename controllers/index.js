@@ -7,5 +7,4 @@ router.use('/api', apiRoutes)
 router.use('/dashboard', dashRoutes)
 router.use('/', homeRoutes)
 
-
 module.exports = router
